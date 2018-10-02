@@ -90,8 +90,8 @@ namespace DatabaseCalc
                     break;
 
                 case "CE":
-                    if (!numTextBox.Text.Equals(""))
-                        result = double.Parse(numTextBox.Text); // 입력된 값을 저장
+    //                if (!numTextBox.Text.Equals(""))
+   //                     result = double.Parse(numTextBox.Text); // 입력된 값을 저장
 
                     buf = "";
                     numTextBox.Text = buf.ToString();
@@ -227,7 +227,8 @@ namespace DatabaseCalc
             {
                 case "MC":
                     m_buf = "";
-         
+                    ceFunc();
+
                     break;
                 case "MR":
                     numTextBox.Text = m_buf;
@@ -238,21 +239,26 @@ namespace DatabaseCalc
                 case "MS":
                     temp = int.Parse(numTextBox.Text);
                     m_buf = temp.ToString();
+                    ceFunc();
 
                     break;
                 case "M+":
                     temp = int.Parse(m_buf);
                     temp += int.Parse(numTextBox.Text);
                     m_buf = temp.ToString();
+                    ceFunc();
+
                     break;
 
                 case "M-":
                     temp = int.Parse(m_buf);
                     temp -= int.Parse(numTextBox.Text);
                     m_buf = temp.ToString();
+                    ceFunc();
+
+
                     break;
             }
-            ceFunc();
         }
         private void ceFunc()
         {
