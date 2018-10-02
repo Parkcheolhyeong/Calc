@@ -262,10 +262,8 @@ namespace DatabaseCalc
         }
         private void ceFunc()
         {
-            if (!numTextBox.Text.Equals(""))
-                result = double.Parse(numTextBox.Text); // 입력된 값을 저장
-
             buf = "";
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
